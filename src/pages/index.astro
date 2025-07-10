@@ -1,11 +1,177 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Cursos Educativos - Udemy">
+    <h1 class="title">Cursos educativos</h1>
+    <p class="subtitle">Educación al alcance de tus manos.</p>
+
+    <div class="stats">
+        <span class="icon">👥</span>
+        <span class="students">750.362 estudiantes</span>
+    </div>
+
+    <div class="contenido">
+        <img
+            src="1.png"
+            width="250px"
+            height="250px"
+            alt="Estudiantes trabajando"
+        />
+        <div class="texto">
+            <h1>Habilidades que te ayudan a alcanzar tus metas</h1>
+            <p>
+                La tecnología, el mundo laboral y nuestras metas evolucionan muy
+                rápido. Consigue todo lo que necesitas para alcanzarlas.
+            </p>
+            <div class="botones">
+                <button>Plan Individual</button>
+                <button>Plan para empresas</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="habilidades">
+        <h2>Todas las habilidades profesionales que necesitas</h2>
+        <p>
+            Desde habilidades esenciales hasta temas técnicos de cualquier área.
+        </p>
+        <div class="tags">
+            <div>Programación Web</div>
+            <div>ChatGPT</div>
+            <div>Ciencias de la Información</div>
+            <div>Python</div>
+            <div>Aprendizaje automático</div>
+            <div>Estadística</div>
+        </div>
+    </div>
+
+    <h2>Cursos para iniciar con tus metas</h2>
+    <div class="cursos">
+        <div class="curso">
+            <img src="curso1.jpg" alt="HTML y CSS" />
+            <div class="curso-texto">
+                <a
+                    href="principiante.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>HTML, CSS3, Javascript para Principiantes</strong>
+                </a>
+                <p>
+                    Aprende a crear tus propias páginas web con este curso
+                    introductorio de HTML, CSS3 y JavaScript para principiantes.
+                </p>
+            </div>
+        </div>
+
+        <div class="curso">
+            <img src="vegetariana.jpg" alt="Comida vegetariana" />
+            <div class="curso-texto">
+                <strong>Curso de Comida Vegetariana</strong>
+                Descubre el mundo de la cocina saludable con este curso práctico
+                de comida vegetariana, ideal para todos los niveles.
+            </div>
+        </div>
+
+        <div class="curso">
+            <img src="guitarra.jpg" alt="Guitarra" />
+            <div class="curso-texto">
+                <strong>Guitarra para Principiantes</strong>
+                Empieza tu viaje musical aprendiendo a tocar la guitarra desde cero
+                con este curso para principiantes.
+            </div>
+        </div>
+    </div>
+
+    <div class="objetivos">
+        <div class="objetivos-texto">
+            <h2>Aprendizaje orientado a tus objetivos</h2>
+
+            <h3>Forma Práctica</h3>
+            <p>
+                Desarrolla eficazmente tus habilidades con ejercicios basados en
+                exámenes de prueba, cuestionarios y espacios de trabajo.
+            </p>
+
+            <h3>Preparación para certificaciones</h3>
+            <p>
+                Puedes obtener certificaciones reconocidas en el sector
+                resolviendo desafíos reales.
+            </p>
+
+            <h3>Datos y Análisis</h3>
+            <p>
+                Acelera tus objetivos con datos avanzados y un equipo dedicado
+                de éxito del cliente para fomentar un aprendizaje eficaz.
+            </p>
+
+            <h3>Contenido Personalizable</h3>
+            <p>
+                Crear vías de aprendizaje personalizadas para los objetivos de
+                tu equipo y organización.
+            </p>
+        </div>
+
+        <div class="objetivos-imagenes">
+            <img src="2.png" alt="Aprendizaje" />
+            <img src="6.png" alt="Datos y análisis" />
+        </div>
+    </div>
+
+    <h2>Testimonios de nuestros usuarios</h2>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <p>"Udemy marcó un antes y después en mi vida"</p>
+            <div class="user-info">
+                <img
+                    src="https://via.placeholder.com/50/FF6666/FFFFFF?text=AL"
+                    alt="Alvin Lim"
+                    class="user-avatar"
+                />
+                <div>
+                    <span class="user-name">Alvin Lim</span>
+                    <span class="user-title"
+                        >Director de tecnología en Dimensional.</span
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Con Udemy conseguí un nuevo puesto de trabajo con mejor sueldo"
+            </p>
+            <div class="user-info">
+                <img
+                    src="https://via.placeholder.com/50/66FF66/FFFFFF?text=LC"
+                    alt="Lizbeth Cruzado"
+                    class="user-avatar"
+                />
+                <div>
+                    <span class="user-name">Lizbeth Cruzado</span>
+                    <span class="user-title">Gestor de cuentas de Amazon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Con Udemy Business, los colaboradores pudieron adquirir los
+                conocimientos tecnológicos que necesitaban"
+            </p>
+            <div class="user-info">
+                <img
+                    src="https://via.placeholder.com/50/6666FF/FFFFFF?text=IS"
+                    alt="Ian Stevens"
+                    class="user-avatar"
+                />
+                <div>
+                    <span class="user-name">Ian Stevens</span>
+                    <span class="user-title">Gerente de T.I. L.G.</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
