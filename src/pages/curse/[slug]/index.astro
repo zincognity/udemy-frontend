@@ -1,4 +1,6 @@
 ---
+import Layout from "../../../layouts/Layout.astro";
+
 import type { GetStaticPaths } from "astro";
 
 export const getStaticPaths = (() => {
@@ -10,3 +12,285 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 ---
 
+<Layout title="">
+    <div class="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-4 py-10">
+        <section class="flex-1">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">
+                HTML,CSS3, Javascript para Principiantes
+            </h1>
+            <p class="text-gray-600 text-base mb-6">
+                Aprende HTML, CSS3 y JavaScript: Curso Completo de Desarrollo
+                Web desde Principiante hasta Avanzado
+            </p>
+
+            <h2 class="text-xl font-semibold mb-2">Lo que aprenderás</h2>
+            <ul class="list-disc pl-5 space-y-1 mb-6 text-gray-800">
+                <li>Conceptos generales del desarrollo web.</li>
+                <li>HTML, CSS3, Javascript y Responsive Design.</li>
+                <li>Elementos y propiedades de cada lenguaje.</li>
+                <li>Diseñar cualquier sitio web con HTML y CSS.</li>
+                <li>
+                    Desde lo más básico a lo más avanzado en la creación de un
+                    sitio web profesional.
+                </li>
+            </ul>
+
+            <h2 class="text-xl font-semibold mb-2">Ver temas relacionados</h2>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <button
+                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
+                    >Desarrollo Web</button
+                >
+                <button
+                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
+                    >Informática y software</button
+                >
+                <button
+                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
+                    >Otros</button
+                >
+            </div>
+
+            <h2 class="text-xl font-semibold mb-2">Este curso incluye:</h2>
+            <ul class="list-disc pl-5 space-y-1 text-gray-800 mb-6">
+                <li>20 horas de video bajo demanda.</li>
+                <li>5 artículos.</li>
+                <li>7 cursos descargables.</li>
+                <li>Acceso en dispositivos móviles y TV.</li>
+                <li>Certificación de finalización.</li>
+            </ul>
+        </section>
+
+        <aside
+            class="w-full md:w-80 bg-white rounded shadow-md overflow-hidden"
+        >
+            <div class="relative pb-[56.25%] bg-black">
+                <img
+                    src="/cur.png"
+                    alt="Vista previa del curso"
+                    class="absolute w-full h-full object-cover opacity-70"
+                />
+                <div
+                    class="absolute inset-0 flex justify-center items-center text-white text-5xl"
+                >
+                    ▶
+                </div>
+                <span
+                    class="absolute bottom-2 left-2 text-xs text-white font-semibold"
+                    >Vista previa de este curso</span
+                >
+            </div>
+
+            <div class="p-4 text-center">
+                <p class="text-2xl font-bold">
+                    S/70 <span class="text-sm line-through text-gray-500 ml-2"
+                        >S/111.00</span
+                    >
+                </p>
+                <p class="text-green-600 text-sm font-medium mt-1">
+                    37% de descuento
+                </p>
+                <p class="text-purple-600 text-xs mt-1">
+                    ¡Esta oferta termina en <strong>2 días!</strong>
+                </p>
+
+                <div class="mt-4 flex flex-col gap-2">
+                    <button
+                        class="bg-purple-600 text-white py-2 rounded hover:bg-purple-700"
+                        >Añadir a la cesta</button
+                    >
+                    <button
+                        class="border border-black py-2 rounded hover:bg-gray-100"
+                        >Comprar ahora</button
+                    >
+                </div>
+
+                <div class="mt-4 text-sm text-gray-500">
+                    <p>Garantía de reembolso de 30 días</p>
+                    <p>Acceso de por vida</p>
+                </div>
+
+                <div class="mt-4 flex flex-col gap-1 text-sm text-blue-600">
+                    <a href="#">Compartir</a>
+                    <a href="#">Regalar este curso</a>
+                    <a href="#">Aplicar cupón</a>
+                </div>
+
+                <div class="mt-4 flex gap-2">
+                    <input
+                        type="text"
+                        placeholder="Introducir el cupón"
+                        class="flex-grow border border-gray-300 rounded px-3 py-2 text-sm"
+                    />
+                    <button
+                        class="bg-gray-200 text-sm px-4 rounded hover:bg-gray-300"
+                        >Aplicar</button
+                    >
+                </div>
+
+                <div class="mt-6 text-left text-sm">
+                    <h3 class="text-base font-bold">
+                        Suscribirse a los mejores cursos de Udemy
+                    </h3>
+                    <p class="text-gray-600 mt-1 mb-2">
+                        Consigue este curso y más de 3000 de nuestros cursos
+                        mejor valorados.
+                    </p>
+                    <button
+                        class="w-full border border-black py-2 rounded font-semibold hover:bg-gray-100"
+                        >Prueba gratis el Plan Individual</button
+                    >
+                    <p class="text-center text-xs text-gray-500 mt-2">
+                        A partir de S/40 al mes tras la prueba<br />Cancela
+                        cuando quieras
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="max-w-5xl mx-auto px-4 py-10">
+        <h2 class="text-xl font-semibold mb-4">Contenido del curso:</h2>
+        <div class="border-t divide-y text-sm text-gray-800">
+            <div class="flex justify-between py-3 font-semibold">
+                <p>Introducción: Empecemos en el desarrollo web</p>
+                <div class="text-gray-500">5 clases · 30 min</div>
+            </div>
+            <div class="flex justify-between py-3">
+                <a href="#" class="text-blue-600 hover:underline"
+                    >Introducción al desarrollo Web</a
+                >
+                <div class="text-gray-500">Vista Previa · 10:01</div>
+            </div>
+            <div class="flex justify-between py-3">
+                <p>Introducción HTML5, CSS3, Javascript</p>
+                <span class="text-gray-500">08:19</span>
+            </div>
+            <div class="flex justify-between py-3">
+                <a href="#" class="text-blue-600 hover:underline"
+                    >Recursos que utilizaremos</a
+                >
+                <div class="text-gray-500">Vista Previa · 04:25</div>
+            </div>
+            <div class="flex justify-between py-3">
+                <p>Visual Studio Code: Configuración y extensiones</p>
+                <span class="text-gray-500">00:46</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-6">
+        <h2 class="text-xl font-semibold mb-4">Requisitos:</h2>
+        <ul class="list-disc pl-5 space-y-1 text-gray-800">
+            <li>No se necesitan conocimientos previos.</li>
+            <li>Una computadora con conexión a Internet.</li>
+        </ul>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-6">
+        <h2 class="text-xl font-semibold mb-4">Descripción:</h2>
+        <h3 class="text-lg font-semibold mb-2">
+            ¿Quieres iniciar en el desarrollo web y no sabes por dónde empezar?
+        </h3>
+        <p class="text-gray-800">
+            Cuando iniciamos en este mundo no se sabe el camino que se debe
+            elegir. Es el problema principal de quién quiere iniciar en el
+            desarrollo web, por tal motivo, con este curso, aprenderás los tips
+            y consejos necesarios y puedas adentrarte en el mundo del desarrollo
+            web.
+        </p>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-6">
+        <h2 class="text-xl font-semibold mb-4">¿Para quién es este curso?</h2>
+        <ul class="list-disc pl-5 space-y-1 text-gray-800">
+            <li>
+                Cualquier persona que quiera adentrarse al mundo del desarrollo
+                web.
+            </li>
+            <li>
+                Desarrolladores web que quieran poner a prueba y afianzar sus
+                conocimientos.
+            </li>
+            <li>
+                Cualquier persona interesada en poder desarrollar páginas web
+                profesionales.
+            </li>
+        </ul>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-6">
+        <h2 class="text-xl font-semibold mb-4">Instructor</h2>
+        <h3 class="text-lg font-bold">Jorge Durand</h3>
+        <p class="text-sm text-gray-600">
+            Ingeniero de Sistemas, desarrollador web full stack.
+        </p>
+        <p class="text-sm">Calificación del instructor: 4.7</p>
+        <p class="text-sm">2009 reseñas</p>
+        <p class="text-sm">7566 estudiantes</p>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-6">
+        <h2 class="text-xl font-semibold mb-4">
+            4,7 valoración del curso · 1k valoraciones
+        </h2>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white rounded shadow p-4">
+                <p class="text-gray-800 mb-4">
+                    "Este curso marcó un antes y después en mi vida"
+                </p>
+                <div class="flex items-center gap-3">
+                    <img
+                        src="/11.png"
+                        alt="Alvin Lim"
+                        class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                        <p class="font-semibold">Alvin Lim</p>
+                        <p class="text-sm text-gray-500">
+                            Director de tecnología en Dimensional
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded shadow p-4">
+                <p class="text-gray-800 mb-4">
+                    "Con este curso conseguí un nuevo puesto de trabajo con
+                    mejor sueldo"
+                </p>
+                <div class="flex items-center gap-3">
+                    <img
+                        src="/9.png"
+                        alt="Lizbeth Cruzado"
+                        class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                        <p class="font-semibold">Lizbeth Cruzado</p>
+                        <p class="text-sm text-gray-500">
+                            Gestor de cuentas de Amazon
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded shadow p-4">
+                <p class="text-gray-800 mb-4">
+                    "Los colaboradores adquirieron los conocimientos
+                    tecnológicos que necesitaban"
+                </p>
+                <div class="flex items-center gap-3">
+                    <img
+                        src="/8.jpg"
+                        alt="Ian Stevens"
+                        class="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                        <p class="font-semibold">Ian Stevens</p>
+                        <p class="text-sm text-gray-500">
+                            Gerente de T.I. L.G.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
