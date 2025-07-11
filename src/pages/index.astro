@@ -3,173 +3,252 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Cursos Educativos - Udemy">
-    <h1 class="title">Cursos educativos</h1>
-    <p class="subtitle">Educación al alcance de tus manos.</p>
-
-    <div class="stats">
-        <span class="icon">👥</span>
-        <span class="students">750.362 estudiantes</span>
-    </div>
-
-    <div class="contenido">
-        <img
-            src="1.png"
-            width="250px"
-            height="250px"
-            alt="Estudiantes trabajando"
-        />
-        <div class="texto">
-            <h1>Habilidades que te ayudan a alcanzar tus metas</h1>
-            <p>
-                La tecnología, el mundo laboral y nuestras metas evolucionan muy
-                rápido. Consigue todo lo que necesitas para alcanzarlas.
-            </p>
-            <div class="botones">
-                <button>Plan Individual</button>
-                <button>Plan para empresas</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="habilidades">
-        <h2>Todas las habilidades profesionales que necesitas</h2>
-        <p>
-            Desde habilidades esenciales hasta temas técnicos de cualquier área.
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-900">Cursos educativos</h1>
+        <p class="mt-2 text-lg text-gray-600">
+            Educación al alcance de tus manos.
         </p>
-        <div class="tags">
-            <div>Programación Web</div>
-            <div>ChatGPT</div>
-            <div>Ciencias de la Información</div>
-            <div>Python</div>
-            <div>Aprendizaje automático</div>
-            <div>Estadística</div>
-        </div>
-    </div>
 
-    <h2>Cursos para iniciar con tus metas</h2>
-    <div class="cursos">
-        <div class="curso">
-            <img src="curso1.jpg" alt="HTML y CSS" />
-            <div class="curso-texto">
-                <a
-                    href="principiante.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <strong>HTML, CSS3, Javascript para Principiantes</strong>
-                </a>
-                <p>
-                    Aprende a crear tus propias páginas web con este curso
-                    introductorio de HTML, CSS3 y JavaScript para principiantes.
+        <div class="mt-4 flex items-center text-gray-700">
+            <span class="text-xl mr-2">👥</span>
+            <span class="text-sm">750.362 estudiantes</span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-6 items-center">
+            <img
+                src="/src/assets/1.png"
+                alt="Estudiantes trabajando"
+                class="w-64 rounded-md"
+            />
+            <div class="flex-1 min-w-[280px]">
+                <h2 class="text-xl font-semibold">
+                    Habilidades que te ayudan a alcanzar tus metas
+                </h2>
+                <p class="mt-2 text-gray-600">
+                    La tecnología, el mundo laboral y nuestras metas evolucionan
+                    muy rápido. Consigue todo lo que necesitas para alcanzarlas.
                 </p>
-            </div>
-        </div>
-
-        <div class="curso">
-            <img src="vegetariana.jpg" alt="Comida vegetariana" />
-            <div class="curso-texto">
-                <strong>Curso de Comida Vegetariana</strong>
-                Descubre el mundo de la cocina saludable con este curso práctico
-                de comida vegetariana, ideal para todos los niveles.
-            </div>
-        </div>
-
-        <div class="curso">
-            <img src="guitarra.jpg" alt="Guitarra" />
-            <div class="curso-texto">
-                <strong>Guitarra para Principiantes</strong>
-                Empieza tu viaje musical aprendiendo a tocar la guitarra desde cero
-                con este curso para principiantes.
-            </div>
-        </div>
-    </div>
-
-    <div class="objetivos">
-        <div class="objetivos-texto">
-            <h2>Aprendizaje orientado a tus objetivos</h2>
-
-            <h3>Forma Práctica</h3>
-            <p>
-                Desarrolla eficazmente tus habilidades con ejercicios basados en
-                exámenes de prueba, cuestionarios y espacios de trabajo.
-            </p>
-
-            <h3>Preparación para certificaciones</h3>
-            <p>
-                Puedes obtener certificaciones reconocidas en el sector
-                resolviendo desafíos reales.
-            </p>
-
-            <h3>Datos y Análisis</h3>
-            <p>
-                Acelera tus objetivos con datos avanzados y un equipo dedicado
-                de éxito del cliente para fomentar un aprendizaje eficaz.
-            </p>
-
-            <h3>Contenido Personalizable</h3>
-            <p>
-                Crear vías de aprendizaje personalizadas para los objetivos de
-                tu equipo y organización.
-            </p>
-        </div>
-
-        <div class="objetivos-imagenes">
-            <img src="2.png" alt="Aprendizaje" />
-            <img src="6.png" alt="Datos y análisis" />
-        </div>
-    </div>
-
-    <h2>Testimonios de nuestros usuarios</h2>
-
-    <div class="testimonials-grid">
-        <div class="testimonial-card">
-            <p>"Udemy marcó un antes y después en mi vida"</p>
-            <div class="user-info">
-                <img
-                    src="https://via.placeholder.com/50/FF6666/FFFFFF?text=AL"
-                    alt="Alvin Lim"
-                    class="user-avatar"
-                />
-                <div>
-                    <span class="user-name">Alvin Lim</span>
-                    <span class="user-title"
-                        >Director de tecnología en Dimensional.</span
+                <div class="mt-4 space-x-4">
+                    <button class="bg-cyan-600 text-white px-4 py-2 rounded"
+                        >Plan Individual</button
+                    >
+                    <button class="bg-cyan-600 text-white px-4 py-2 rounded"
+                        >Plan para empresas</button
                     >
                 </div>
             </div>
         </div>
 
-        <div class="testimonial-card">
-            <p>
-                "Con Udemy conseguí un nuevo puesto de trabajo con mejor sueldo"
+        <div class="mt-10">
+            <h2 class="text-2xl font-semibold">
+                Todas las habilidades profesionales que necesitas
+            </h2>
+            <p class="text-gray-600 mt-2">
+                Desde habilidades esenciales hasta temas técnicos de cualquier
+                área.
             </p>
-            <div class="user-info">
-                <img
-                    src="https://via.placeholder.com/50/66FF66/FFFFFF?text=LC"
-                    alt="Lizbeth Cruzado"
-                    class="user-avatar"
-                />
-                <div>
-                    <span class="user-name">Lizbeth Cruzado</span>
-                    <span class="user-title">Gestor de cuentas de Amazon</span>
+            <div class="flex flex-wrap gap-3 mt-4">
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    Programación Web
+                </div>
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    ChatGPT
+                </div>
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    Ciencias de la Información
+                </div>
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    Python
+                </div>
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    Aprendizaje automático
+                </div>
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    Estadística
                 </div>
             </div>
         </div>
 
-        <div class="testimonial-card">
-            <p>
-                "Con Udemy Business, los colaboradores pudieron adquirir los
-                conocimientos tecnológicos que necesitaban"
-            </p>
-            <div class="user-info">
+        <h2 class="text-2xl font-semibold mt-10">
+            Cursos para iniciar con tus metas
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
                 <img
-                    src="https://via.placeholder.com/50/6666FF/FFFFFF?text=IS"
-                    alt="Ian Stevens"
-                    class="user-avatar"
+                    src="/src/assets/curso1.jpg"
+                    alt="HTML y CSS"
+                    class="w-full h-44 object-cover"
                 />
-                <div>
-                    <span class="user-name">Ian Stevens</span>
-                    <span class="user-title">Gerente de T.I. L.G.</span>
+                <div class="p-4">
+                    <a
+                        href="principiante.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="font-semibold block hover:underline"
+                    >
+                        HTML, CSS3, Javascript para Principiantes
+                    </a>
+                    <p class="text-sm text-gray-600 mt-2">
+                        Aprende a crear tus propias páginas web con este curso
+                        introductorio de HTML, CSS3 y JavaScript para
+                        principiantes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img
+                    src="/src/assets/vegetariana.jpg"
+                    alt="Comida vegetariana"
+                    class="w-full h-44 object-cover"
+                />
+                <div class="p-4">
+                    <strong class="block mb-1"
+                        >Curso de Comida Vegetariana</strong
+                    >
+                    <p class="text-sm text-gray-600">
+                        Descubre el mundo de la cocina saludable con este curso
+                        práctico de comida vegetariana, ideal para todos los
+                        niveles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img
+                    src="/src/assets/guitarra.jpg"
+                    alt="Guitarra"
+                    class="w-full h-44 object-cover"
+                />
+                <div class="p-4">
+                    <strong class="block mb-1"
+                        >Guitarra para Principiantes</strong
+                    >
+                    <p class="text-sm text-gray-600">
+                        Empieza tu viaje musical aprendiendo a tocar la guitarra
+                        desde cero con este curso para principiantes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 flex flex-wrap gap-6">
+            <div class="flex-1 min-w-[280px]">
+                <h2 class="text-2xl font-semibold">
+                    Aprendizaje orientado a tus objetivos
+                </h2>
+
+                <div class="mt-4">
+                    <h3 class="font-semibold">Forma Práctica</h3>
+                    <p class="text-gray-600">
+                        Desarrolla eficazmente tus habilidades con ejercicios
+                        basados en exámenes de prueba, cuestionarios y espacios
+                        de trabajo.
+                    </p>
+                </div>
+
+                <div class="mt-4">
+                    <h3 class="font-semibold">
+                        Preparación para certificaciones
+                    </h3>
+                    <p class="text-gray-600">
+                        Puedes obtener certificaciones reconocidas en el sector
+                        resolviendo desafíos reales.
+                    </p>
+                </div>
+
+                <div class="mt-4">
+                    <h3 class="font-semibold">Datos y Análisis</h3>
+                    <p class="text-gray-600">
+                        Acelera tus objetivos con datos avanzados y un equipo
+                        dedicado de éxito del cliente para fomentar un
+                        aprendizaje eficaz.
+                    </p>
+                </div>
+
+                <div class="mt-4">
+                    <h3 class="font-semibold">Contenido Personalizable</h3>
+                    <p class="text-gray-600">
+                        Crear vías de aprendizaje personalizadas para los
+                        objetivos de tu equipo y organización.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col gap-4 min-w-[280px]">
+                <img
+                    src="/src/assets/2.png"
+                    alt="Aprendizaje"
+                    class="rounded shadow-md"
+                />
+                <img
+                    src="/src/assets/6.png"
+                    alt="Datos y análisis"
+                    class="rounded shadow-md"
+                />
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-12 mb-6">
+            Testimonios de nuestros usuarios
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-800 mb-4">
+                    "Udemy marcó un antes y después en mi vida"
+                </p>
+                <div class="flex items-center gap-4">
+                    <img
+                        src="/src/assets/11.png"
+                        alt="Alvin Lim"
+                        class="w-12 h-12 rounded-full border"
+                    />
+                    <div>
+                        <span class="font-semibold">Alvin Lim</span>
+                        <p class="text-sm text-gray-500">
+                            Director de tecnología en Dimensional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-800 mb-4">
+                    "Con Udemy conseguí un nuevo puesto de trabajo con mejor
+                    sueldo"
+                </p>
+                <div class="flex items-center gap-4">
+                    <img
+                        src="/src/assets/9.png"
+                        alt="Lizbeth Cruzado"
+                        class="w-12 h-12 rounded-full border"
+                    />
+                    <div>
+                        <span class="font-semibold">Lizbeth Cruzado</span>
+                        <p class="text-sm text-gray-500">
+                            Gestor de cuentas de Amazon
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="text-gray-800 mb-4">
+                    "Con Udemy Business, los colaboradores pudieron adquirir los
+                    conocimientos tecnológicos que necesitaban"
+                </p>
+                <div class="flex items-center gap-4">
+                    <img
+                        src="/src/assets/8.jpg"
+                        alt="Ian Stevens"
+                        class="w-12 h-12 rounded-full border"
+                    />
+                    <div>
+                        <span class="font-semibold">Ian Stevens</span>
+                        <p class="text-sm text-gray-500">
+                            Gerente de T.I. L.G.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
