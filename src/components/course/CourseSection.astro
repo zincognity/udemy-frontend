@@ -1,0 +1,40 @@
+---
+import type { Course } from "../../types/course";
+
+export const prerender = false;
+
+const data = await fetch("http://localhost:8080/curso/list");
+
+const courses: Course[] = await data.json();
+---
+
+<div>
+    <h2 class="text-2xl font-semibold mt-10">
+        Cursos para iniciar con tus metas
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-6">
+        {
+            courses.map((course) => (
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img
+                        src="/src/assets/curso1.jpg"
+                        alt={course.name}
+                        class="w-full h-44 object-cover"
+                    />
+                    <div class="p-4">
+                        <a
+                            href={`/curso/${course.id}`}
+                            rel="noopener noreferrer"
+                            class="font-semibold block hover:underline"
+                        >
+                            {course.name}
+                        </a>
+                        <p class="text-sm text-gray-600 mt-2">
+                            {course.description}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>

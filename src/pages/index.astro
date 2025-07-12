@@ -1,20 +1,7 @@
 ---
+import CategorySection from "../components/category/CategorySection.astro";
+import CourseSection from "../components/course/CourseSection.astro";
 import Layout from "../layouts/Layout.astro";
-
-export const prerender = false;
-
-const data = await fetch("http://localhost:8080/curso/list");
-
-interface Category {}
-
-interface Course {
-    id: number;
-    name: string;
-    description: string;
-    createdAt: string;
-    category: Category;
-}
-const courses: Course[] = await data.json();
 ---
 
 <Layout title="Cursos Educativos - Udemy">
@@ -54,64 +41,9 @@ const courses: Course[] = await data.json();
             </div>
         </div>
 
-        <div class="mt-10">
-            <h2 class="text-2xl font-semibold">
-                Todas las habilidades profesionales que necesitas
-            </h2>
-            <p class="text-gray-600 mt-2">
-                Desde habilidades esenciales hasta temas técnicos de cualquier
-                área.
-            </p>
-            <div class="flex flex-wrap gap-3 mt-4">
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    Programación Web
-                </div>
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    ChatGPT
-                </div>
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    Ciencias de la Información
-                </div>
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    Python
-                </div>
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    Aprendizaje automático
-                </div>
-                <div class="bg-gray-800 text-white px-4 py-2 rounded">
-                    Estadística
-                </div>
-            </div>
-        </div>
+        <CategorySection />
 
-        <h2 class="text-2xl font-semibold mt-10">
-            Cursos para iniciar con tus metas
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
-            {
-                courses.map((course) => (
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img
-                            src="/src/assets/curso1.jpg"
-                            alt={course.name}
-                            class="w-full h-44 object-cover"
-                        />
-                        <div class="p-4">
-                            <a
-                                href="/curse/1"
-                                rel="noopener noreferrer"
-                                class="font-semibold block hover:underline"
-                            >
-                                {course.name}
-                            </a>
-                            <p class="text-sm text-gray-600 mt-2">
-                                {course.description}
-                            </p>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
+        <CourseSection />
 
         <div class="mt-12 flex flex-wrap gap-6">
             <div class="flex-1 min-w-[280px]">

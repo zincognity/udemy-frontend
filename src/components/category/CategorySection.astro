@@ -1,0 +1,27 @@
+---
+import type { Category } from "../../types/category";
+
+export const prerender = false;
+
+const data = await fetch("http://localhost:8080/categoria/list");
+
+const categories: Category[] = await data.json();
+---
+
+<div class="mt-10">
+    <h2 class="text-2xl font-semibold">
+        Todas las habilidades profesionales que necesitas
+    </h2>
+    <p class="text-gray-600 mt-2">
+        Desde habilidades esenciales hasta temas técnicos de cualquier área.
+    </p>
+    <div class="flex flex-wrap gap-3 mt-4">
+        {
+            categories.map((category) => (
+                <div class="bg-gray-800 text-white px-4 py-2 rounded">
+                    {category.name}
+                </div>
+            ))
+        }
+    </div>
+</div>
