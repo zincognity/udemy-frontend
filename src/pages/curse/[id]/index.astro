@@ -2,25 +2,39 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import type { GetStaticPaths } from "astro";
+import type { Course } from "../../../types/course";
 
-export const getStaticPaths = (() => {
-    return [
-        {
-            params: { slug: "1" },
-        },
-    ];
+export const prerender = false;
+
+export const getStaticPaths = (async () => {
+    const data = await fetch("http://localhost:8080/curso/list");
+
+    const courses: Course[] = await data.json();
+
+    return courses.map((course) => {
+        return {
+            params: {
+                id: course.id,
+            },
+        };
+    });
 }) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+
+const data = await fetch(`http://localhost:8080/curso/id/${id}`);
+
+const course: Course = await data.json();
 ---
 
 <Layout title="">
     <div class="flex flex-col md:flex-row gap-10 max-w-7xl mx-auto px-4 py-10">
         <section class="flex-1">
             <h1 class="text-3xl md:text-4xl font-bold mb-2">
-                HTML,CSS3, Javascript para Principiantes
+                {course.name}
             </h1>
             <p class="text-gray-600 text-base mb-6">
-                Aprende HTML, CSS3 y JavaScript: Curso Completo de Desarrollo
-                Web desde Principiante hasta Avanzado
+                {course.description}
             </p>
 
             <h2 class="text-xl font-semibold mb-2">Lo que aprenderás</h2>
