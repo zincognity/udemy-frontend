@@ -1,5 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+export const prerender = false;
+
+const data = await fetch("http://localhost:8080/curso/list");
+
+interface Category {}
+
+interface Course {
+    id: number;
+    name: string;
+    description: string;
+    createdAt: string;
+    category: Category;
+}
+const courses: Course[] = await data.json();
 ---
 
 <Layout title="Cursos Educativos - Udemy">
@@ -73,62 +88,29 @@ import Layout from "../layouts/Layout.astro";
             Cursos para iniciar con tus metas
         </h2>
         <div class="grid md:grid-cols-3 gap-6 mt-6">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                    src="/src/assets/curso1.jpg"
-                    alt="HTML y CSS"
-                    class="w-full h-44 object-cover"
-                />
-                <div class="p-4">
-                    <a
-                        href="/curse/1"
-                        rel="noopener noreferrer"
-                        class="font-semibold block hover:underline"
-                    >
-                        HTML, CSS3, Javascript para Principiantes
-                    </a>
-                    <p class="text-sm text-gray-600 mt-2">
-                        Aprende a crear tus propias páginas web con este curso
-                        introductorio de HTML, CSS3 y JavaScript para
-                        principiantes.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                    src="/src/assets/vegetariana.jpg"
-                    alt="Comida vegetariana"
-                    class="w-full h-44 object-cover"
-                />
-                <div class="p-4">
-                    <strong class="block mb-1"
-                        >Curso de Comida Vegetariana</strong
-                    >
-                    <p class="text-sm text-gray-600">
-                        Descubre el mundo de la cocina saludable con este curso
-                        práctico de comida vegetariana, ideal para todos los
-                        niveles.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                    src="/src/assets/guitarra.jpg"
-                    alt="Guitarra"
-                    class="w-full h-44 object-cover"
-                />
-                <div class="p-4">
-                    <strong class="block mb-1"
-                        >Guitarra para Principiantes</strong
-                    >
-                    <p class="text-sm text-gray-600">
-                        Empieza tu viaje musical aprendiendo a tocar la guitarra
-                        desde cero con este curso para principiantes.
-                    </p>
-                </div>
-            </div>
+            {
+                courses.map((course) => (
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img
+                            src="/src/assets/curso1.jpg"
+                            alt={course.name}
+                            class="w-full h-44 object-cover"
+                        />
+                        <div class="p-4">
+                            <a
+                                href="/curse/1"
+                                rel="noopener noreferrer"
+                                class="font-semibold block hover:underline"
+                            >
+                                {course.name}
+                            </a>
+                            <p class="text-sm text-gray-600 mt-2">
+                                {course.description}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
 
         <div class="mt-12 flex flex-wrap gap-6">
