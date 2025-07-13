@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import type { GetStaticPaths } from "astro";
+import ContentSection from "../../../components/course/ContentSection.astro";
 import type { Course } from "../../../types/course";
 
 export const prerender = false;
@@ -144,35 +145,7 @@ const course: Course = await data.json();
         </aside>
     </div>
 
-    <section class="max-w-5xl mx-auto px-4 py-10">
-        <h2 class="text-xl font-semibold mb-4">Contenido del curso:</h2>
-        <div class="border-t divide-y text-sm text-gray-800">
-            <div class="flex justify-between py-3 font-semibold">
-                <p>Introducción: Empecemos en el desarrollo web</p>
-                <div class="text-gray-500">5 clases · 30 min</div>
-            </div>
-            <div class="flex justify-between py-3">
-                <a href="#" class="text-blue-600 hover:underline"
-                    >Introducción al desarrollo Web</a
-                >
-                <div class="text-gray-500">Vista Previa · 10:01</div>
-            </div>
-            <div class="flex justify-between py-3">
-                <p>Introducción HTML5, CSS3, Javascript</p>
-                <span class="text-gray-500">08:19</span>
-            </div>
-            <div class="flex justify-between py-3">
-                <a href="#" class="text-blue-600 hover:underline"
-                    >Recursos que utilizaremos</a
-                >
-                <div class="text-gray-500">Vista Previa · 04:25</div>
-            </div>
-            <div class="flex justify-between py-3">
-                <p>Visual Studio Code: Configuración y extensiones</p>
-                <span class="text-gray-500">00:46</span>
-            </div>
-        </div>
-    </section>
+    <ContentSection courseId={course.id} />
 
     <section class="max-w-5xl mx-auto px-4 py-6">
         <h2 class="text-xl font-semibold mb-4">Requisitos:</h2>

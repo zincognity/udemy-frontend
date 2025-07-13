@@ -1,0 +1,31 @@
+---
+import type { Module } from "../../types/module";
+
+export const prerender = false;
+
+interface Props {
+    courseId: number;
+}
+
+const { courseId } = Astro.props;
+
+const data = await fetch(
+    `http://localhost:8080/module/course/${courseId}/list`
+);
+
+const modules: Module[] = await data.json();
+---
+
+<section class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold mb-4">Contenido del curso:</h2>
+    <div class="border-t divide-y text-sm text-gray-800">
+        {
+            modules.map((module) => (
+                <div class="flex justify-between py-3">
+                    <p>{module.title}</p>
+                    <span class="text-gray-500">{module.duration}:00</span>
+                </div>
+            ))
+        }
+    </div>
+</section>
