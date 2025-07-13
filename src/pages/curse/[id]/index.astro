@@ -34,35 +34,24 @@ const course: Course = await data.json();
                 {course.name}
             </h1>
             <p class="text-gray-600 text-base mb-6">
+                {course.littleDescription}
+            </p>
+
+            <p class="text-gray-600 text-base mb-6">
                 {course.description}
             </p>
 
-            <h2 class="text-xl font-semibold mb-2">Lo que aprenderás</h2>
-            <ul class="list-disc pl-5 space-y-1 mb-6 text-gray-800">
-                <li>Conceptos generales del desarrollo web.</li>
-                <li>HTML, CSS3, Javascript y Responsive Design.</li>
-                <li>Elementos y propiedades de cada lenguaje.</li>
-                <li>Diseñar cualquier sitio web con HTML y CSS.</li>
-                <li>
-                    Desde lo más básico a lo más avanzado en la creación de un
-                    sitio web profesional.
-                </li>
-            </ul>
-
             <h2 class="text-xl font-semibold mb-2">Ver temas relacionados</h2>
             <div class="flex flex-wrap gap-2 mb-6">
-                <button
-                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
-                    >Desarrollo Web</button
-                >
-                <button
-                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
-                    >Informática y software</button
-                >
-                <button
-                    class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300"
-                    >Otros</button
-                >
+                {
+                    course.tags
+                        .split(",")
+                        .map((tag) => (
+                            <button class="px-4 py-2 bg-gray-200 text-sm font-medium rounded hover:bg-gray-300">
+                                {tag.toUpperCase()}
+                            </button>
+                        ))
+                }
             </div>
 
             <h2 class="text-xl font-semibold mb-2">Este curso incluye:</h2>
@@ -97,15 +86,7 @@ const course: Course = await data.json();
 
             <div class="p-4 text-center">
                 <p class="text-2xl font-bold">
-                    S/70 <span class="text-sm line-through text-gray-500 ml-2"
-                        >S/111.00</span
-                    >
-                </p>
-                <p class="text-green-600 text-sm font-medium mt-1">
-                    37% de descuento
-                </p>
-                <p class="text-purple-600 text-xs mt-1">
-                    ¡Esta oferta termina en <strong>2 días!</strong>
+                    S/ {course.price}
                 </p>
 
                 <div class="mt-4 flex flex-col gap-2">
