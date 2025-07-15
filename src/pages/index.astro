@@ -1,6 +1,5 @@
 ---
-import CategorySection from "../components/category/CategorySection.astro";
-import CourseSection from "../components/course/CourseSection.astro";
+import SearchSection from "../components/course/SearchSection";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,14 +10,12 @@ import Layout from "../layouts/Layout.astro";
             Educación al alcance de tus manos.
         </p>
 
-        <div class="mt-4 flex items-center text-gray-700">
+        <div class="my-4 flex items-center text-gray-700">
             <span class="text-xl mr-2">👥</span>
             <span class="text-sm">750.362 estudiantes</span>
         </div>
 
-        <CategorySection />
-
-        <CourseSection />
+        <SearchSection client:load />
 
         <div class="mt-12 flex flex-wrap gap-6">
             <div class="flex-1 min-w-[280px]">
