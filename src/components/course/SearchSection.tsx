@@ -118,7 +118,7 @@ export default function SearchSection() {
                             />
                             <div className="p-4">
                                 <a
-                                    href={`/curse/${course.id}`}
+                                    href={`/course/${course.id}`}
                                     rel="noopener noreferrer"
                                     className="font-semibold block hover:underline"
                                 >

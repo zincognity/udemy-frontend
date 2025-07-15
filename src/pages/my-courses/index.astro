@@ -1,0 +1,9 @@
+---
+import MyCourses from "../../components/course/MyCourses";
+import Layout from "../../layouts/Layout.astro";
+export const prerender = false;
+---
+
+<Layout title="Mis Cursos">
+    <MyCourses client:load />
+</Layout>
