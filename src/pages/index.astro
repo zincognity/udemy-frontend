@@ -1,6 +1,12 @@
 ---
 import SearchSection from "../components/course/SearchSection";
 import Layout from "../layouts/Layout.astro";
+
+const data = await fetch(`http://localhost:8080/usuario/count`);
+
+const count: number = await data.json();
+
+console.log(count);
 ---
 
 <Layout title="Cursos Educativos - Udemy">
@@ -12,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="my-4 flex items-center text-gray-700">
             <span class="text-xl mr-2">👥</span>
-            <span class="text-sm">750.362 estudiantes</span>
+            <span class="text-sm">{count} estudiantes</span>
         </div>
 
         <SearchSection client:load />
