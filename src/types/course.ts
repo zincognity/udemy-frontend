@@ -9,4 +9,5 @@ export interface Course {
     price: number;
     createdAt: Date;
     category: Category;
+    imagePath: string;
 }

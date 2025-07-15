@@ -17,7 +17,7 @@ const courses: Course[] = await data.json();
             courses.map((course) => (
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <img
-                        src="/src/assets/curso1.jpg"
+                        src={`/src/assets${course.imagePath}`}
                         alt={course.name}
                         class="w-full h-44 object-cover"
                     />
