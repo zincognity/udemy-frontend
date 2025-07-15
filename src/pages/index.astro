@@ -5,8 +5,6 @@ import Layout from "../layouts/Layout.astro";
 const data = await fetch(`http://localhost:8080/usuario/count`);
 
 const count: number = await data.json();
-
-console.log(count);
 ---
 
 <Layout title="Cursos Educativos - Udemy">
