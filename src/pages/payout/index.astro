@@ -7,7 +7,9 @@ export const prerender = false;
 
 const courseId = Astro.url.searchParams.get("course");
 
-const data = await fetch(`http://localhost:8080/curso/id/${courseId}`);
+const data = await fetch(
+    `https://udemy-backend.incognity.dev/curso/id/${courseId}`
+);
 
 const course: Course = await data.json();
 ---
@@ -95,7 +97,7 @@ const course: Course = await data.json();
 
                 try {
                     const res = await fetch(
-                        "http://localhost:8080/inscription",
+                        "https://udemy-backend.incognity.dev/inscription",
                         {
                             method: "POST",
                             headers: {

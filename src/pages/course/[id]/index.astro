@@ -9,7 +9,7 @@ import type { Course } from "../../../types/course";
 export const prerender = false;
 
 export const getStaticPaths = (async () => {
-    const data = await fetch("http://localhost:8080/curso/list");
+    const data = await fetch("https://udemy-backend.incognity.dev/curso/list");
 
     const courses: Course[] = await data.json();
 
@@ -24,7 +24,7 @@ export const getStaticPaths = (async () => {
 
 const { id } = Astro.params;
 
-const data = await fetch(`http://localhost:8080/curso/id/${id}`);
+const data = await fetch(`https://udemy-backend.incognity.dev/curso/id/${id}`);
 
 const course: Course = await data.json();
 ---

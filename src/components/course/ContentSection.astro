@@ -10,7 +10,7 @@ interface Props {
 const { courseId } = Astro.props;
 
 const data = await fetch(
-    `http://localhost:8080/module/course/${courseId}/list`
+    `https://udemy-backend.incognity.dev/module/course/${courseId}/list`
 );
 
 const modules: Module[] = await data.json();

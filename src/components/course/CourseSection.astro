@@ -3,7 +3,7 @@ import type { Course } from "../../types/course";
 
 export const prerender = false;
 
-const data = await fetch("http://localhost:8080/curso/list");
+const data = await fetch("https://udemy-backend.incognity.dev/curso/list");
 
 const courses: Course[] = await data.json();
 ---

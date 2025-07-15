@@ -12,7 +12,7 @@ export default function SearchSection() {
     useEffect(() => {
         const fetchCategories = async () => {
             const response = await fetch(
-                "http://localhost:8080/categoria/list"
+                "https://udemy-backend.incognity.dev/categoria/list"
             );
             const data = await response.json();
             setCategories(data);
@@ -21,7 +21,9 @@ export default function SearchSection() {
     }, []);
 
     const fetchAllCourses = async () => {
-        const response = await fetch("http://localhost:8080/curso/list");
+        const response = await fetch(
+            "https://udemy-backend.incognity.dev/curso/list"
+        );
         const data = await response.json();
         setCourses(data);
     };
@@ -37,7 +39,7 @@ export default function SearchSection() {
         }
 
         const response = await fetch(
-            `http://localhost:8080/curso/search?name=${encodeURIComponent(
+            `https://udemy-backend.incognity.dev/curso/search?name=${encodeURIComponent(
                 name
             )}`
         );
@@ -52,7 +54,7 @@ export default function SearchSection() {
         } else {
             setSelectedCategoryId(id);
             const response = await fetch(
-                `http://localhost:8080/curso/search?category=${id}`
+                `https://udemy-backend.incognity.dev/curso/search?category=${id}`
             );
             const data = await response.json();
             setCourses(data);

@@ -30,7 +30,7 @@ export default function MyCourses() {
         const fetchCourses = async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:8080/inscription/courses?id=${user.id}`
+                    `https://udemy-backend.incognity.dev/inscription/courses?id=${user.id}`
                 );
                 if (!res.ok) {
                     throw new Error("Error al obtener inscripciones");

@@ -32,7 +32,9 @@ export default function CommentSection({ courseId }: Props) {
     }, []);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/comment/search?course=${courseId}`)
+        fetch(
+            `https://udemy-backend.incognity.dev/comment/search?course=${courseId}`
+        )
             .then((res) => res.json())
             .then((data) => setComments(data.elements || []))
             .finally(() => setLoading(false));
@@ -50,7 +52,7 @@ export default function CommentSection({ courseId }: Props) {
             courseId,
         };
 
-        const res = await fetch("http://localhost:8080/comment", {
+        const res = await fetch("https://udemy-backend.incognity.dev/comment", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),

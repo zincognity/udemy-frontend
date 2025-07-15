@@ -3,7 +3,7 @@ import type { Category } from "../../types/category";
 
 export const prerender = false;
 
-const data = await fetch("http://localhost:8080/categoria/list");
+const data = await fetch("https://udemy-backend.incognity.dev/categoria/list");
 
 const categories: Category[] = await data.json();
 ---

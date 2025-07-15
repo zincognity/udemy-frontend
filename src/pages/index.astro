@@ -2,7 +2,7 @@
 import SearchSection from "../components/course/SearchSection";
 import Layout from "../layouts/Layout.astro";
 
-const data = await fetch(`http://localhost:8080/usuario/count`);
+const data = await fetch(`https://udemy-backend.incognity.dev/usuario/count`);
 
 const count: number = await data.json();
 ---
