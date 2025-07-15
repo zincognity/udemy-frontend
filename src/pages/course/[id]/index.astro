@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 
 import type { GetStaticPaths } from "astro";
+import CommentSection from "../../../components/comment/CommentSection";
 import ContentSection from "../../../components/course/ContentSection.astro";
 import type { Course } from "../../../types/course";
 
@@ -121,67 +122,5 @@ const course: Course = await data.json();
         </ul>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 py-6">
-        <h2 class="text-xl font-semibold mb-4">
-            4,7 valoración del curso · 1k valoraciones
-        </h2>
-        <div class="grid md:grid-cols-3 gap-4">
-            <div class="bg-white rounded shadow p-4">
-                <p class="text-gray-800 mb-4">
-                    "Este curso marcó un antes y después en mi vida"
-                </p>
-                <div class="flex items-center gap-3">
-                    <img
-                        src="/11.png"
-                        alt="Alvin Lim"
-                        class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                        <p class="font-semibold">Alvin Lim</p>
-                        <p class="text-sm text-gray-500">
-                            Director de tecnología en Dimensional
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded shadow p-4">
-                <p class="text-gray-800 mb-4">
-                    "Con este curso conseguí un nuevo puesto de trabajo con
-                    mejor sueldo"
-                </p>
-                <div class="flex items-center gap-3">
-                    <img
-                        src="/9.png"
-                        alt="Lizbeth Cruzado"
-                        class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                        <p class="font-semibold">Lizbeth Cruzado</p>
-                        <p class="text-sm text-gray-500">
-                            Gestor de cuentas de Amazon
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded shadow p-4">
-                <p class="text-gray-800 mb-4">
-                    "Los colaboradores adquirieron los conocimientos
-                    tecnológicos que necesitaban"
-                </p>
-                <div class="flex items-center gap-3">
-                    <img
-                        src="/8.jpg"
-                        alt="Ian Stevens"
-                        class="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div>
-                        <p class="font-semibold">Ian Stevens</p>
-                        <p class="text-sm text-gray-500">
-                            Gerente de T.I. L.G.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <CommentSection client:load courseId={course.id} />
 </Layout>
