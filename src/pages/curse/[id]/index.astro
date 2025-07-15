@@ -84,9 +84,10 @@ const course: Course = await data.json();
                 </p>
 
                 <div class="mt-4 flex flex-col gap-2">
-                    <button
+                    <a
+                        href={`/payout?course=${course.id}`}
                         class="bg-purple-600 text-white py-2 rounded hover:bg-purple-700"
-                        >Inscribirme ahora</button
+                        >Inscribirme ahora</a
                     >
                 </div>
 
