@@ -55,14 +55,7 @@ const course: Course = await data.json();
                 }
             </div>
 
-            <h2 class="text-xl font-semibold mb-2">Este curso incluye:</h2>
-            <ul class="list-disc pl-5 space-y-1 text-gray-800 mb-6">
-                <li>20 horas de video bajo demanda.</li>
-                <li>5 artículos.</li>
-                <li>7 cursos descargables.</li>
-                <li>Acceso en dispositivos móviles y TV.</li>
-                <li>Certificación de finalización.</li>
-            </ul>
+            <ContentSection courseId={course.id} />
         </section>
 
         <aside
@@ -70,7 +63,7 @@ const course: Course = await data.json();
         >
             <div class="relative pb-[56.25%] bg-black">
                 <img
-                    src="/cur.png"
+                    src={`/src/assets/${course.imagePath}`}
                     alt="Vista previa del curso"
                     class="absolute w-full h-full object-cover opacity-70"
                 />
@@ -108,46 +101,12 @@ const course: Course = await data.json();
 
                 <div class="mt-4 flex flex-col gap-1 text-sm text-blue-600">
                     <a href="#">Compartir</a>
-                    <a href="#">Regalar este curso</a>
-                    <a href="#">Aplicar cupón</a>
-                </div>
-
-                <div class="mt-4 flex gap-2">
-                    <input
-                        type="text"
-                        placeholder="Introducir el cupón"
-                        class="flex-grow border border-gray-300 rounded px-3 py-2 text-sm"
-                    />
-                    <button
-                        class="bg-gray-200 text-sm px-4 rounded hover:bg-gray-300"
-                        >Aplicar</button
-                    >
-                </div>
-
-                <div class="mt-6 text-left text-sm">
-                    <h3 class="text-base font-bold">
-                        Suscribirse a los mejores cursos de Udemy
-                    </h3>
-                    <p class="text-gray-600 mt-1 mb-2">
-                        Consigue este curso y más de 3000 de nuestros cursos
-                        mejor valorados.
-                    </p>
-                    <button
-                        class="w-full border border-black py-2 rounded font-semibold hover:bg-gray-100"
-                        >Prueba gratis el Plan Individual</button
-                    >
-                    <p class="text-center text-xs text-gray-500 mt-2">
-                        A partir de S/40 al mes tras la prueba<br />Cancela
-                        cuando quieras
-                    </p>
                 </div>
             </div>
         </aside>
     </div>
 
-    <ContentSection courseId={course.id} />
-
-    <section class="max-w-5xl mx-auto px-4 py-6">
+    <section class="mx-auto px-4 py-6">
         <h2 class="text-xl font-semibold mb-4">Requisitos:</h2>
         <ul class="list-disc pl-5 space-y-1 text-gray-800">
             <li>No se necesitan conocimientos previos.</li>
@@ -155,7 +114,7 @@ const course: Course = await data.json();
         </ul>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 py-6">
+    <section class="mx-auto px-4 py-6">
         <h2 class="text-xl font-semibold mb-4">Descripción:</h2>
         <h3 class="text-lg font-semibold mb-2">
             ¿Quieres iniciar en el desarrollo web y no sabes por dónde empezar?
@@ -169,7 +128,7 @@ const course: Course = await data.json();
         </p>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 py-6">
+    <section class="mx-auto px-4 py-6">
         <h2 class="text-xl font-semibold mb-4">¿Para quién es este curso?</h2>
         <ul class="list-disc pl-5 space-y-1 text-gray-800">
             <li>
@@ -187,7 +146,7 @@ const course: Course = await data.json();
         </ul>
     </section>
 
-    <section class="max-w-5xl mx-auto px-4 py-6">
+    <section class="mx-auto px-4 py-6">
         <h2 class="text-xl font-semibold mb-4">Instructor</h2>
         <h3 class="text-lg font-bold">Jorge Durand</h3>
         <p class="text-sm text-gray-600">
