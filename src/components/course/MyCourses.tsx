@@ -82,7 +82,7 @@ export default function MyCourses() {
                             className="bg-white shadow-sm rounded-lg overflow-hidden"
                         >
                             <img
-                                src={`/src/assets${course.imagePath}`}
+                                src={`${course.imagePath}`}
                                 alt={course.name}
                                 className="w-full h-40 object-cover"
                             />

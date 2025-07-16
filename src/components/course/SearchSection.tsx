@@ -114,7 +114,7 @@ export default function SearchSection() {
                             className="bg-white rounded-lg shadow-md overflow-hidden"
                         >
                             <img
-                                src={`/src/assets${course.imagePath}`}
+                                src={`${course.imagePath}`}
                                 alt={course.name}
                                 className="w-full h-44 object-cover"
                             />
